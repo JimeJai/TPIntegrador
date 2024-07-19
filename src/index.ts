@@ -1,0 +1,17 @@
+import net from "net";
+import { endPoints } from "./view/app";
+import { PORT } from "./constants";
+
+const server = net.createServer();
+
+server.on("connection", (socket) => {
+  socket.on("data", async (mensaje) => {
+    const entrada = await endPoints(mensaje);
+    //console.log(entrada);
+
+    socket.write(entrada);
+  });
+});
+server.listen(PORT, () =>
+  console.log("servidor escuchando en puerto: " + PORT)
+);

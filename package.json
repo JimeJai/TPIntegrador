@@ -4,7 +4,13 @@
   "description": "llaves de mi api marvel\r llave publica: 2a4719ff22a727511e390bdd5c8cfbb4\r llave privada: 9beccf474168fd6df09f3f32e9876a9d4c3fa41b",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node ./src/index.ts"
+    "dev": "ts-node ./src/index.ts",
+    "modelP": "ts-node ./src/model/people.ts",
+    "modelF": "ts-node ./src/model/films.ts",
+    "controlerP": "ts-node ./src/controller/people.ts",
+    "dataBase": "ts-node ./src/dataBase/index.ts",
+    "app": "ts-node ./src/view/app.ts",
+    "client": "ts-node ./src/client.ts"
   },
   "keywords": [],
   "author": "",
