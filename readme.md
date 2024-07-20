@@ -1,5 +1,20 @@
-llaves de mi api marvel
-llave publica: 2a4719ff22a727511e390bdd5c8cfbb4
-llave privada: 9beccf474168fd6df09f3f32e9876a9d4c3fa41b
+INSTRUCTIVO PARA EL USUARIO
 
-para ponerlo en el url tuve q codificarla con md5 o algo asi: https://gateway.marvel.com/v1/public/characters?ts=1&apikey=2a4719ff22a727511e390bdd5c8cfbb4&hash=39de316ab915a761d15e9450e478c980 ahi estoy pidiendo characters, pero podria cambiar eso con backtips para otras peticiones
+La aplicacion recibe peticiones y devuelve informaciós sobre personajes y peliculas de STARWARS.
+
+Las posibles peticiones son:
+
+const mensaje = { theme: "pages" }; //Devuelve el paginado completo de personajes
+const mensaje = { theme: "peopleOneP", name: "Leia Organa" };//name: "string"--> nombre del personaje//Devuelve info del personaje buscado
+const mensaje = { theme: "peopleNames" };//Devuelve los nombres de los personajes
+const mensaje = { theme: "characters" };//Devuelve los personajes de la primera pagina
+const mensaje = { theme: "films" };//Devuelve info de todas las peliculas
+const mensaje = { theme: "filmOpening, name: "Return of the Jedi" };//name: "string" --> nombre de la pelicula a buscar//Devuelve número de episodio y Opening de la pelicula buscada
+const mensaje = { theme: "filmDate", numEp: 5 };//numEp: number --> numero de la pelicula//Devuelve el nombre de la pelicula buscada y su fecha de realización
+
+Desde el archivo Client. ts, se envia las peticiones.
+Desde la terminal:
+npm run dev --> para levantar el servidor.
+npm run client --> para enviar el pedido.
+
+Cada busqueda sera guardada en el archivo json.json

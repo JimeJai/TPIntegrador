@@ -1,33 +1,36 @@
 import { getCharacters } from "../model/people";
 import { getData } from "../dataBase";
+import { Messages } from "../enum";
 
 async function getAllPeople() {
+  const paginas = [];
   for (let index = 1; index < 10; index++) {
-    const personas = await getData("people" + `?page=${index}&limit=10`);
-    return personas.results;
-  }
-}
+    const infoAll = await getData("people" + `?page=${index}&limit=10`);
 
-//getAllPeople();
+    paginas.push(infoAll.results);
+  }
+  return paginas;
+}
+getAllPeople();
 
 async function getByName(name: string) {
   const personajes = await getCharacters();
-  const personaje = personajes.find((objeto: any) => objeto.name == name); //solo me dejo cuando le puse any al type de perso
-  // console.log(personaje.result);
-  //   console.log(personaje.uid);
+  const personaje = personajes.find((objeto: any) => objeto.name == name);
+  if (!personaje) {
+    return Messages.NOT_FOUND;
+  }
   if (personaje) {
     const info = await getData("people" + `/${personaje.uid}/`);
-    //console.log(info.result);
-    return info.result.properties;
+    return `${info.result.properties.name}\naltura ${info.result.properties.height}\npeso ${info.result.properties.mass}\ncolor de pelo ${info.result.properties.hair_color}\ncolor de ojos ${info.result.properties.eye_color}\ngenero ${info.result.properties.gender}`;
+    //return info.result.properties.height;
   }
 }
 
-//getByName("Leia Organa");
+//getByName("blaaa");
 
 async function getAllNames() {
   const personajes = await getCharacters();
   const nombres = personajes.map((objeto: any) => objeto.name);
-  //console.log(nombres);
   return nombres;
 }
 //getAllNames();

@@ -8,9 +8,11 @@
     "modelP": "ts-node ./src/model/people.ts",
     "modelF": "ts-node ./src/model/films.ts",
     "controlerP": "ts-node ./src/controller/people.ts",
+    "controlerF": "ts-node ./src/controller/films.ts",
     "dataBase": "ts-node ./src/dataBase/index.ts",
     "app": "ts-node ./src/view/app.ts",
-    "client": "ts-node ./src/client.ts"
+    "client": "ts-node ./src/client.ts",
+    "json": "ts-node ./src/utils/fs.ts"
   },
   "keywords": [],
   "author": "",
