@@ -1,6 +1,6 @@
 INSTRUCTIVO PARA EL USUARIO
 
-La aplicacion recibe peticiones y devuelve informaciós sobre personajes y peliculas de STARWARS.
+La aplicacion recibe peticiones y devuelve información sobre personajes y peliculas de la saga de STAR WARS.
 
 Las posibles peticiones son:
 
@@ -17,4 +17,13 @@ Desde la terminal:
 npm run dev --> para levantar el servidor.
 npm run client --> para enviar el pedido.
 
-Cada busqueda sera guardada en el archivo json.json
+Cada busqueda será guardada en el archivo json.json, pero me da errores al ir guardando.
+
+---
+
+Comentarios:
+Algo que me cuesta es cómo debo mandar la iformación y cómo la recibo, y a partir de eso
+si tengo q hacerle un stringify o un parse o un toString.
+(Se que tuve mas problemas pero ese es el ultimo que recuerdo)
+
+Jimena Miramontes

@@ -4,7 +4,8 @@ const client = net.createConnection({ port: 3000 });
 
 client.on("connect", () => {
   //const mensaje = { theme: "characters" };
-  const mensaje = { theme: "peopleOneP", name: "Darth Vader" };
+
+  const mensaje = { theme: "peopleOneP", name: "Luke Skywalker" };
   //const mensaje = { theme: "peopleNames" };
   //const mensaje = { theme: "pages" };
   //const mensaje = { theme: "films" };

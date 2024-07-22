@@ -1,7 +1,6 @@
 import net from "net";
 import { endPoints } from "./view/app";
 import { PORT } from "./constants";
-import { writeJSON } from "./utils/fs";
 
 const server = net.createServer();
 

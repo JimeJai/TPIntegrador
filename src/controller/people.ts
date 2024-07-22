@@ -11,7 +11,7 @@ async function getAllPeople() {
   }
   return paginas;
 }
-getAllPeople();
+//getAllPeople();
 
 async function getByName(name: string) {
   const personajes = await getCharacters();
@@ -21,7 +21,7 @@ async function getByName(name: string) {
   }
   if (personaje) {
     const info = await getData("people" + `/${personaje.uid}/`);
-    return `${info.result.properties.name}\naltura ${info.result.properties.height}\npeso ${info.result.properties.mass}\ncolor de pelo ${info.result.properties.hair_color}\ncolor de ojos ${info.result.properties.eye_color}\ngenero ${info.result.properties.gender}`;
+    return `${info.result.properties.name}\naltura: ${info.result.properties.height}\npeso: ${info.result.properties.mass}\ncolor de pelo: ${info.result.properties.hair_color}\ncolor de ojos: ${info.result.properties.eye_color}\ngenero: ${info.result.properties.gender}`;
     //return info.result.properties.height;
   }
 }

@@ -12,7 +12,8 @@
     "dataBase": "ts-node ./src/dataBase/index.ts",
     "app": "ts-node ./src/view/app.ts",
     "client": "ts-node ./src/client.ts",
-    "json": "ts-node ./src/utils/fs.ts"
+    "json": "ts-node ./src/utils/fs.ts",
+    "compile": "tsc"
   },
   "keywords": [],
   "author": "",
