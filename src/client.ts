@@ -5,12 +5,12 @@ const client = net.createConnection({ port: 3000 });
 client.on("connect", () => {
   //const mensaje = { theme: "characters" };
 
-  const mensaje = { theme: "peopleOneP", name: "Luke Skywalker" };
+  //const mensaje = { theme: "peopleOneP", name: "Leia Organa" };
   //const mensaje = { theme: "peopleNames" };
-  //const mensaje = { theme: "pages" };
-  //const mensaje = { theme: "films" };
+  // const mensaje = { theme: "pages" };
+  // const mensaje = { theme: "films" };
   //const mensaje = { theme: "filmOpening", name: "Return of the Jedi" };
-  //const mensaje = { theme: "filmDate", numEp: 6 };
+  const mensaje = { theme: "filmDate", numEp: 6 };
   const messege = JSON.stringify(mensaje);
   //console.log(messege);
 
